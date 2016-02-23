@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Disqus AJAX Test Site</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        
+
+       
+    </style>
+</head>
+
+
+<body>
+
+    <p>13:12 Obama raises h1b approval to all  <a  class="glyphicon glyphicon-comment" data-toggle="modal" data-target="#myModal" onclick="reset('newid1', 'http://127.0.0.1:8000/demo1/', 'Article Title 1', 'en');"></a>
+</p>
+		<p>45:62 Donald trump loses elections<a class="glyphicon glyphicon-comment" data-toggle="modal" data-target="#myModal" onclick="reset('newid4', 'http://127.0.0.1:8000/demo1/', 'Article Title 1', 'en');"></a></p>
+		<p>65:85 This is the claimbuster Demo comments example 
+<a class="glyphicon glyphicon-comment" data-toggle="modal" data-target="#myModal" onclick="reset('newid5', 'http://127.0.0.1:8000/demo1/', 'Article Title 1', 'en');"></a></p>
+		<p>75:56 This is the claimbuster Demo comments example <a  class="glyphicon glyphicon-comment" data-toggle="modal" data-target="#myModal" onclick="reset('newid6', 'http://127.0.0.1:8000/demo1/', 'Article Title 1', 'en');"></a></p>    
+
+
+
+
+            
+            
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+       <div id="disqus_thread">
+  <!--<a href="#" onclick="disqus();return false;">Show Comments</a> -->
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>            
+            
+            
+<div id="mytab" style="display:none">            
+
+</div>    
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'democomments12';
+    var disqus_identifier = 'newid1';
+    var disqus_url = 'http://127.0.0.1:8000/demo1/';
+	var disqus_config = function () { 
+	  this.language = "en";
+	};
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+  /*  var disqus_loaded = false;
+    function disqus() {
+ 
+  if (!disqus_loaded)  {
+    
+    // This is to ensure that Disqus widget is loaded only once
+    disqus_loaded = true;
+    
+    var e = document.createElement("script");
+    e.type = "text/javascript";
+    e.async = true;
+    e.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+    (document.getElementsByTagName("head")[0] ||
+     document.getElementsByTagName("body")[0])
+    .appendChild(e);
+  }
+} */
+    
+  (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * Disqus Reset Function * * */
+    var reset = function (newIdentifier, newUrl, newTitle, newLanguage) {
+        DISQUS.reset({
+            reload: true,
+            config: function () {
+                this.page.identifier = newIdentifier;
+                this.page.url = newUrl;
+                this.page.title = newTitle;
+                this.language = newLanguage;
+            }
+        });
+    };
+    
+    /*$('#mypop').popover({
+    html: true,
+    content: function() {
+      return $('#mytab').html();
+    }
+})*/
+    
+</script>
+
+</body>
+
+</html>

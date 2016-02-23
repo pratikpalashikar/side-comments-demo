@@ -1,0 +1,61 @@
+<!-- home.html -->
+<html>
+
+<head>
+    {% load comments_tags %} {% include_jQuery %}
+
+
+    <script>
+        /**
+         * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+         */
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'democomments12';
+        var disqus_identifier = 'newid1';
+        var disqus_url = 'http://127.0.0.1:8000/newid1';
+        var disqus_config = function () {
+            this.language = "en";
+        };
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+
+
+
+        var reset = function (newIdentifier, newUrl, newTitle, newLanguage) {
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = newIdentifier;
+                    this.page.url = newUrl;
+                    this.page.title = newTitle;
+                    this.language = newLanguage;
+                }
+            });
+        };
+    </script>
+
+
+</head>
+
+<body>
+    <h1>Hello</h1>
+
+    <p>hello this is pratik demo
+        <button onclick="reset('newid1', 'http://127.0.0.1:8000/id1', 'Article Title 2', 'en');">Load article 1</button>
+    </p>
+    <button onclick="reset('newid2', 'http://127.0.0.1:8000/id2', 'Article Title 3', 'en');">Load article 1</button>
+    <button onclick="reset('newid3', 'http://127.0.0.1:8000/id3', 'Article Title 4', 'en');">Load article 1</button>
+
+    <div id="disqus_thread">
+        <h1>transscript two</h1></div>
+
+</body>
+
+</html>
